@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnGraphQL", "LearnGraphQL\LearnGraphQL.csproj", "{3F9D6342-29BB-4102-9D4F-C7AC76F312A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnGraphQl.Movies", "LearnGraphQl.Movies\LearnGraphQl.Movies.csproj", "{52B485FB-090A-424C-820F-2E5B62A618FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F9D6342-29BB-4102-9D4F-C7AC76F312A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F9D6342-29BB-4102-9D4F-C7AC76F312A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F9D6342-29BB-4102-9D4F-C7AC76F312A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F9D6342-29BB-4102-9D4F-C7AC76F312A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52B485FB-090A-424C-820F-2E5B62A618FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B485FB-090A-424C-820F-2E5B62A618FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B485FB-090A-424C-820F-2E5B62A618FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B485FB-090A-424C-820F-2E5B62A618FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36D34CA2-2AF1-464D-AE59-5A40E7E250DA}
+	EndGlobalSection
+EndGlobal
