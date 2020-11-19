@@ -8,6 +8,10 @@ namespace LearnGraphQl.Movies.Schema
         public MovieSchema(IServiceProvider provider) : base(provider)
         {
             Query = provider.GetRequiredService<MoviesQuery>();
+
+            Mutation = provider.GetRequiredService<MoviesMutation>();
+
+            Subscription = provider.GetRequiredService<MoviesSubscription>();
         }
     }
 }

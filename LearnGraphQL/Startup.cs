@@ -18,11 +18,17 @@ namespace LearnGraphQL
         {
             services.AddSingleton<IMovieService, MovieService>();
             services.AddSingleton<IActorService, ActorService>();
-
+            services.AddSingleton<IMovieEventService,MovieEventService>();
+            
             services.AddSingleton<MovieType>();
+            services.AddSingleton<MovieInputType>();
             services.AddSingleton<ActorType>();
             services.AddSingleton<MovieRatingEnum>();
+            services.AddSingleton<MovieEventType>();
+
             services.AddSingleton<MoviesQuery>();
+            services.AddSingleton<MoviesMutation>();
+            services.AddSingleton<MoviesSubscription>();
 
             services.AddSingleton<MovieSchema>();
 

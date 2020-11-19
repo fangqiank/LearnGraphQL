@@ -8,10 +8,12 @@ namespace LearnGraphQl.Movies.Services
 {
     public class MovieService:IMovieService
     {
+        private readonly IMovieEventService _movieEventService;
         private readonly IList<Movie> _movies;
 
-        public MovieService()
+        public MovieService(IMovieEventService movieEventService)
         {
+            this._movieEventService = movieEventService;
             _movies= new List<Movie>
             {
                 new Movie
@@ -70,6 +72,10 @@ namespace LearnGraphQl.Movies.Services
 
         public Task<Movie> GetByIdAsync(int id)
         {
+            var movie = _movies.SingleOrDefault(x => x.Id == id);
+            if(movie is null)
+                throw new ArgumentException($"Movie Id {id} is wrong");
+
             return Task.FromResult(_movies.SingleOrDefault(x => x.Id == id));
         }
 
@@ -80,7 +86,19 @@ namespace LearnGraphQl.Movies.Services
 
         public Task<Movie> CreateAsync(Movie movie)
         {
-            throw new NotImplementedException();
+            _movies.Add(movie);
+
+            var movieEvent = new MovieEvent
+            {
+                Title = $"Add Movie",
+                MovieId = movie.Id,
+                TimeStamp = DateTime.Now,
+                MovieRating = movie.MovieRating
+            };
+
+            _movieEventService.AddEvent(movieEvent);
+
+            return Task.FromResult(movie);
         }
     }
 }
